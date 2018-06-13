@@ -476,6 +476,18 @@ func (s *PrivateAccountAPI) SignAndSendTransaction(ctx context.Context, args Sen
 	return s.SendTransaction(ctx, args, passwd)
 }
 
+type LegicashAPI struct {
+	
+}
+
+func NewLegicashAPI () *LegicashAPI {
+	return &LegicashAPI {}
+}
+
+func (s *LegicashAPI) Hello() string {
+	return "Hello"
+}
+	
 // PublicBlockChainAPI provides an API to access the Ethereum blockchain.
 // It offers only methods that operate on public data that is freely available to anyone.
 type PublicBlockChainAPI struct {

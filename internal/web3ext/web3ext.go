@@ -26,6 +26,7 @@ var Modules = map[string]string{
 	"miner":      Miner_JS,
 	"net":        Net_JS,
 	"personal":   Personal_JS,
+	"legicash":   Legicash_JS,
 	"rpc":        RPC_JS,
 	"shh":        Shh_JS,
 	"swarmfs":    SWARMFS_JS,
@@ -543,6 +544,19 @@ web3._extend({
 		new web3._extend.Property({
 			name: 'listWallets',
 			getter: 'personal_listWallets'
+		}),
+	]
+})
+`
+const Legicash_JS = `
+web3._extend({
+	property: 'legicash',
+	methods: [
+	],
+	properties: [
+		new web3._extend.Property({
+			name: 'hello',
+			getter: 'legicash_hello'
 		}),
 	]
 })
